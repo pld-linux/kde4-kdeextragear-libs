@@ -1,12 +1,14 @@
 %define		orgname kdeextragear-libs
+%define		snap	812803
+
 Summary:	KDcraw libary
 Summary(pl.UTF-8):	Biblioteka KDcraw
 Name:		kde4-kdeextragear-libs
-Version:	804372
-Release:	0.1
+Version:	4.0.81
+Release:	0.%{snap}.1
 License:	GPL v2+
 Group:		X11/Libraries
-Source0:	ftp://ftp.kde.org/pub/kde/unstable/snapshots/%{orgname}-%{version}.tar.bz2
+Source0:	ftp://ftp.kde.org/pub/kde/unstable/snapshots/%{orgname}-%{snap}.tar.bz2
 # Source0-md5:	d07fd8fd8ab7799e63f42286064526f9
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	cmake
@@ -82,7 +84,7 @@ libksane.
 libksane.
 
 %prep
-%setup -q -n %{orgname}-%{version}
+%setup -q -n %{orgname}-%{snap}
 
 %build
 install -d build
