@@ -13,7 +13,7 @@ Source0:	ftp://ftp.kde.org/pub/kde/unstable/snapshots/%{orgname}-%{snap}.tar.bz2
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
-BuildRequires:	kde4-automoc4-devel
+BuildRequires:	kde4-kdesupport-automoc4 >= %{version}
 BuildRequires:	kde4-kdesupport-phonon-devel >= %{version}
 #BuildRequires:	kdelibs-devel >= 9:3.2.0
 BuildRequires:	lcms-devel
@@ -77,17 +77,17 @@ libkexiv2.
 %description libkexiv2 -l pl.UTF-8
 libkexiv2.
 
-%package libksane
-Summary:	libksane
-Summary(pl.UTF-8):	libksane
-Group:		X11/Libraries
-Provides:	libksane
+#%package libksane
+#Summary:	libksane
+#Summary(pl.UTF-8):	libksane
+#Group:		X11/Libraries
+#Provides:	libksane
 
-%description libksane
-libksane.
+#%description libksane
+#libksane.
 
-%description libksane -l pl.UTF-8
-libksane.
+#%description libksane -l pl.UTF-8
+#libksane.
 
 %prep
 %setup -q -n %{orgname}-%{snap}
@@ -126,7 +126,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kipiplugins
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_gpssync.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_jpeglossless.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_metadataedit.so
@@ -135,6 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_simpleviewer.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_slideshow.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_timeadjust.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_htmlexport.so
 %attr(755,root,root) %ghost %{_libdir}/libkipi.so.5
 %attr(755,root,root) %{_libdir}/libkipi.so.?.?.?
 %attr(755,root,root) %ghost %{_libdir}/libkipiplugins.so.1
@@ -152,11 +152,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkexiv2.so.?.?.?
 %attr(755,root,root) %{_pkgconfigdir}/libkexiv2.pc
 
-%files libksane
-%defattr(644,root,root,755)
-%attr(755,root,root) %ghost %{_libdir}/libksane.so.0
-%attr(755,root,root) %{_libdir}/libksane.so.?.?.?
-%attr(755,root,root) %{_pkgconfigdir}/libksane.pc
+#%files libksane
+#%defattr(644,root,root,755)
+#%attr(755,root,root) %ghost %{_libdir}/libksane.so.0
+#%attr(755,root,root) %{_libdir}/libksane.so.?.?.?
+#%attr(755,root,root) %{_pkgconfigdir}/libksane.pc
 
 %files devel
 %defattr(644,root,root,755)
@@ -164,9 +164,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkipiplugins.so
 %attr(755,root,root) %{_libdir}/libkipi.so
 %attr(755,root,root) %{_libdir}/libkexiv2.so
-%attr(755,root,root) %{_libdir}/libksane.so
+#%attr(755,root,root) %{_libdir}/libksane.so
 %{_includedir}/libkdcraw
 %{_pkgconfigdir}/libkdcraw.pc
 %{_includedir}/libkexiv2
 %{_includedir}/libkipi
-%{_includedir}/libksane
+#%{_includedir}/libksane
