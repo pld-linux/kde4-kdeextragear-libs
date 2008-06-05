@@ -9,9 +9,7 @@ Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/unstable/snapshots/%{orgname}-%{version}.tar.bz2
 # Source0-md5:	d07fd8fd8ab7799e63f42286064526f9
 URL:		http://extragear.kde.org/apps/kipi/
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	cmake
 #BuildRequires:	kdelibs-devel >= 9:3.2.0
 BuildRequires:	lcms-devel
 BuildRequires:	libjpeg-devel
@@ -87,12 +85,12 @@ libksane.
 %setup -q -n %{orgname}-%{version}
 
 %build
-mkdir build
+install -d build
 cd build
 %cmake \
-		-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-		-LCMS_DIR=%{_libdir} \
-		../
+	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	-LCMS_DIR=%{_libdir} \
+	../
 %{__make}
 
 %install
