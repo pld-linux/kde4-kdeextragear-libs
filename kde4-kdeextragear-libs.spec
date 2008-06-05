@@ -12,9 +12,15 @@ Source0:	ftp://ftp.kde.org/pub/kde/unstable/snapshots/%{orgname}-%{snap}.tar.bz2
 # Source0-md5:	88f731f3b48e96f6b783b1e98ec30a18
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	cmake
+BuildRequires:	exiv2-devel >= 0.12
+BuildRequires:	kde4-automoc4-devel
+BuildRequires:	kde4-kdesupport-phonon-devel >= %{version}
 #BuildRequires:	kdelibs-devel >= 9:3.2.0
 BuildRequires:	lcms-devel
 BuildRequires:	libjpeg-devel
+BuildRequires:	libpng-devel
+BuildRequires:	libxml2-devel
+BuildRequires:	libxslt-devel
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
