@@ -9,7 +9,7 @@ Release:	0.%{snap}.1
 License:	GPL v2+
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/unstable/snapshots/%{orgname}-%{snap}.tar.bz2
-# Source0-md5:	d07fd8fd8ab7799e63f42286064526f9
+# Source0-md5:	88f731f3b48e96f6b783b1e98ec30a18
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	cmake
 #BuildRequires:	kdelibs-devel >= 9:3.2.0
