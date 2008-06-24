@@ -14,7 +14,7 @@ URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	kde4-kdesupport-automoc4 >= %{version}
-BuildRequires:	kde4-kdesupport-phonon-devel >= %{version}
+BuildRequires:	phonon-devel >= 4.1.83
 #BuildRequires:	kdelibs-devel >= 9:3.2.0
 BuildRequires:	lcms-devel
 BuildRequires:	libjpeg-devel
