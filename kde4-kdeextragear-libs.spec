@@ -4,23 +4,22 @@
 Summary:	KDcraw libary
 Summary(pl.UTF-8):	Biblioteka KDcraw
 Name:		kde4-kdeextragear-libs
-Version:	4.0.81
+Version:	4.1.61
 Release:	0.%{snap}.1
 License:	GPL v2+
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/unstable/snapshots/%{orgname}-%{snap}.tar.bz2
 # Source0-md5:	88f731f3b48e96f6b783b1e98ec30a18
 URL:		http://extragear.kde.org/apps/kipi/
+BuildRequires:	automoc4
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
-BuildRequires:	kde4-kdesupport-automoc4 >= %{version}
-BuildRequires:	phonon-devel >= 4.1.83
-#BuildRequires:	kdelibs-devel >= 9:3.2.0
 BuildRequires:	lcms-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-devel
+BuildRequires:	phonon-devel >= 4.1.83
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -143,6 +142,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kipi
 %{_datadir}/apps/kipiplugin_metadataedit
 %{_datadir}/apps/kipiplugin_simpleviewerexport
+%{_datadir}/apps/kipiplugin_htmlexport
 %{_datadir}/kde4/services/kipiplugin_*.desktop
 %{_datadir}/kde4/servicetypes/kipiplugin.desktop
 
