@@ -4,7 +4,7 @@
 Summary:	KDcraw libary
 Summary(pl.UTF-8):	Biblioteka KDcraw
 Name:		kde4-kdeextragear-libs
-Version:	4.1.61
+Version:	4.1.63
 Release:	0.%{snap}.1
 License:	GPL v2+
 Group:		X11/Libraries
@@ -125,6 +125,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kipiplugins
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_gpssync.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_jpeglossless.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_metadataedit.so
