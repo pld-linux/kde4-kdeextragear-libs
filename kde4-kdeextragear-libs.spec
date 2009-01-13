@@ -4,7 +4,7 @@
 Summary:	KDcraw libary
 Summary(pl.UTF-8):	Biblioteka KDcraw
 Name:		kde4-kdeextragear-libs
-Version:	4.1.63
+Version:	4.1.73
 Release:	0.%{snap}.1
 License:	GPL v2+
 Group:		X11/Libraries
@@ -14,7 +14,6 @@ URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	automoc4
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
-BuildRequires:	kde4-kdegraphics-devel
 BuildRequires:	lcms-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
